@@ -1,0 +1,12 @@
+.home-page{
+    background-color: var( --color-bg-light);
+   display: flex;
+}
+.brand-name{
+    font-size: 4rem;
+    margin-bottom: 4rem;
+}
+
+.left-section{ 
+    margin: 6rem 0 0 4rem;
+}
