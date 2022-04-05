@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { Footer } from "../../components/Footer/Footer";
-import { Header } from "../../components/Header/Header";
+import { Header, Footer } from "../../Layouts/";
 import "./notes-page.css";
 import { Link } from "react-router-dom";
+import { TextEditor } from "../../components/TextEditor/TextEditor";
+import { NotesCard } from "../../components/NotesCard/NotesCard";
 
 const Notes = () => {
   return (
@@ -11,7 +11,7 @@ const Notes = () => {
       <div className="sidebar">
         <div className="sidebar-icon">
           <div className="sidebar-icon-option">
-            <Link className="link" to="/new-notes">
+            <Link className="link" to="/notes">
               Notes
             </Link>
           </div>
@@ -32,6 +32,8 @@ const Notes = () => {
           </div>
         </div>
       </div>
+      <TextEditor />
+      <NotesCard />
       <Footer />
     </>
   );
