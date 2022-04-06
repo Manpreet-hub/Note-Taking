@@ -15,11 +15,6 @@ const Sidebar = () => {
           </Link>
         </div>
         <div className="sidebar-icon-option">
-          <Link className="link" to="/labels">
-            Labels
-          </Link>
-        </div>
-        <div className="sidebar-icon-option">
           <Link className="link" to="/trash">
             Trash
           </Link>

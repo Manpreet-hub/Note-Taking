@@ -39,12 +39,9 @@ const TextEditor = () => {
           placeholder="Take a Note..."
         />
 
-        <div className="btns">
+        <div className="btn-container">
           <button type="submit" className="btn-dark notes-btn">
             Add
-          </button>
-          <button type="submit" className="btn-dark notes-btn">
-            Close
           </button>
         </div>
       </form>

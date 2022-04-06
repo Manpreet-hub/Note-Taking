@@ -23,7 +23,11 @@ const NotesCard = () => {
                 </p>
               </div>
               <div className="card-icons">
-                <ArchiveIcon />
+                <ArchiveIcon
+                  onClick={(e) =>
+                    noteDispatch({ type: "MOVE_TO_ARCHIVE", payload: notes })
+                  }
+                />
                 <DeleteOutlineIcon
                   onClick={(e) => {
                     noteDispatch({
