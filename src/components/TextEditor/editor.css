@@ -1,9 +1,9 @@
 .note-editor {
-  width: 60%;
-  min-height: 10rem;
-  padding: 2rem;
-  margin-top: 1rem;
-  margin-left: 20rem;
+  width: 50%;
+  padding: 20px;
+  margin: auto;
+  position: relative;
+  margin-bottom: 2rem;
 }
 
 .notes-title{
@@ -11,6 +11,8 @@
   padding: 10px;
   outline: 0px;
   border: transparent;
+  position: relative;
+  margin-bottom: 2rem;
 }
 
 .notes-text{
@@ -18,24 +20,25 @@
   }
 
 .form-container{
-  width: 70%;
+  width: 100%;
   padding-bottom: 15px;
   border: 1px solid;
   border-radius: 5px;
 }
-.btns
+.btn-container
 {
-  display: flex;
-  flex-direction: row;
-  margin-left: 25rem;
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
+  margin: 1rem;
+  padding: 1rem;
 }
 
 .notes-btn{
-  margin-left: 1rem;
-  margin-top: 4rem;
   padding: 10px;
+  width: fit-content;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.2rem;
   border-radius: 4px;
 }
 
