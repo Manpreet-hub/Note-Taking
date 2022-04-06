@@ -1,13 +1,28 @@
 .notes-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 1.8rem;
 }
 
 .notes-card{
     margin: 6rem 0 0 2rem;
-    display: flex;
-    gap: 4rem;
     border: 1px solid;
-    width: fit-content;
     padding: 1rem;
+    width:20rem;
     border-radius: 0.5rem;
+    word-wrap:break-word;
 }
+
+.card-icons{
+    position: relative;
+    top: 1rem;
+    cursor: pointer;
+}
+
+.note-title{
+    font-size: 1.5rem;
+    border-bottom: 1px solid;
+}
+
+
+
