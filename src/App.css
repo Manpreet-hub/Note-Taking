@@ -21,6 +21,10 @@
   background-color: var(--color-bg-transparent);
 }
 
+.main-container{
+  margin: 0 0 0 15rem;
+}
+
 .link {
   text-decoration: none;
   color: var(--color-bg-dark);
