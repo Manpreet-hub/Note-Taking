@@ -2,7 +2,7 @@ import { useNotes } from "../../contexts/note-context";
 import "./notes-card.css";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import ArchiveIcon from "@mui/icons-material/Archive";
-import PushPinIcon from "@mui/icons-material/PushPin";
+import PushPinTwoToneIcon from "@mui/icons-material/PushPinTwoTone";
 
 const NotesCard = () => {
   const { noteState, noteDispatch } = useNotes();
@@ -13,7 +13,11 @@ const NotesCard = () => {
           return (
             <div className="notes-card">
               <div className="card-icons">
-                <PushPinIcon />
+                <PushPinTwoToneIcon
+                  onClick={() =>
+                    noteDispatch({ type: "PINNED_NOTE", payload: notes })
+                  }
+                />
               </div>
               <div className="card-body">
                 <h3 className="note-title"> {notes.title}</h3>
