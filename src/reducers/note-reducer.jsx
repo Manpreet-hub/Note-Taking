@@ -7,12 +7,18 @@ const noteReducer = (state, action) => {
         ...state,
         trash: [...state.trash, { ...action.payload }],
         note: state.note.filter((item) => item.id !== action.payload.id),
+        pinnedNote: state.pinnedNote.filter(
+          (item) => item.id !== action.payload.id
+        ),
       };
     case "MOVE_TO_ARCHIVE":
       return {
         ...state,
         archive: [...state.archive, { ...action.payload }],
         note: state.note.filter((item) => item.id !== action.payload.id),
+        pinnedNote: state.pinnedNote.filter(
+          (item) => item.id !== action.payload.id
+        ),
       };
     case "UNARCHIVE":
       return {
@@ -34,6 +40,29 @@ const noteReducer = (state, action) => {
       return {
         ...state,
         trash: state.trash.filter((noteItem) => noteItem.id !== action.payload),
+        pinnedNote: state.trash.filter(
+          (noteItem) => noteItem.id !== action.payload
+        ),
+      };
+    case "PINNED_NOTE":
+      return {
+        ...state,
+        pinnedNote: [...state.pinnedNote, { ...action.payload }],
+        archive: [...state.archive, { ...action.payload }],
+        archive: state.archive.filter(
+          (noteItem) => noteItem.id !== action.payload.id
+        ),
+        note: state.note.filter(
+          (noteItem) => noteItem.id !== action.payload.id
+        ),
+      };
+    case "UNPINNED_NOTE":
+      return {
+        ...state,
+        pinnedNote: state.pinnedNote.filter(
+          (noteItem) => noteItem.id !== action.payload.id
+        ),
+        note: [...state.note, { ...action.payload }],
       };
     default:
       return state;
