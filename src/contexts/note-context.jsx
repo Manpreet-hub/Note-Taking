@@ -4,7 +4,7 @@ import { noteReducer } from "../reducers/note-reducer";
 const NotesContext = createContext();
 const useNotes = () => useContext(NotesContext);
 const NotesProvider = ({ children }) => {
-  const initialValue = { note: [], trash: [], archive: [], pin: [] };
+  const initialValue = { note: [], trash: [], archive: [], pinnedNote: [] };
   const [noteState, noteDispatch] = useReducer(noteReducer, initialValue);
 
   return (
